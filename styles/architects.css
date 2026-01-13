@@ -9,6 +9,11 @@
   font-style: normal;
 }
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 /*  shared styles */
 
 .display-flex{
@@ -24,6 +29,10 @@
     border-radius: 8px;
     border: none;
 
+}
+
+main > section{
+    margin-top: 130px;
 }
 
 /* dark-02 */
@@ -79,6 +88,8 @@
 .navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
+    padding-bottom: 45px;
+    padding-top: 20px;
 
 }
 
@@ -107,13 +118,117 @@
     width: 100%;
 }
 
-/* Responsive  */
+
+ /* main part star  */
+
+/* team and features related styles */
+
+.teams{
+   align-items: center; 
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+    margin-left: 100px;
+}
+
+.our-features{
+    margin-left: 73px;
+    max-width: 530px;
+}
+
+#quick-list{
+    color: #727272;
+    font-weight: 500;
+}
+
+.feature-tittle{
+    font-size: 2.8rem;
+}
+
+#of-our{
+    color: #131313;
+    font-weight: bold;
+}
+#features{
+    color: #FF900E;
+    font-weight: bold;
+}
+
+.paragraph{
+    font-size: 1rem;
+    line-height: 26px;
+    font-family: 400;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    color: #727272;
+}
+
+
+/* features will enjoy */
+
+
+
+
+
+/* Some facts */
+
+
+/* Responsive  header part */
 
 @media screen and (max-width: 576px){
-    .navbar, .nav-links{
+    .navbar,
+    .nav-links,
+    .teams
+    {
         flex-direction: column;
 
 
     }
+
+   
+     /* main part star */
+ .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-img-container{
+    display: grid;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+    .our-features {
+    margin: 10px;
+}
+
+.feature-tittle {
+    margin-top: 15px;
+    text-align: center;
+}
+
+}
+
+
+/* medium size device */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
     
+    .teams{
+        flex-direction: column;
+    }
+
+    .team-img-container {
+    margin-left: 25px;
+}
+
+.our-features {
+    /* margin-left: 73px; */
+    /* max-width: 530px; */
+    margin-top: 25px;
+}
+
+
 }
